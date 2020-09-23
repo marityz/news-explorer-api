@@ -26,7 +26,7 @@ mongoose.connect(DATABASE, {
 });
 
 app.use(requestLogger);
-app.use(router);
+app.use('/api', router);
 app.use(errorLogger);
 app.use(errors());
 app.use(ErrorMiddleware);
