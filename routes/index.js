@@ -6,14 +6,14 @@ const articlesRouter = require('./articles');
 const { auth } = require('../middlewares/auth');
 const { nonExistentPaths } = require('../controllers/non-existent-paths');
 
-router.post('/signin', celebrate({
+router.post('/api/signin', celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
     password: Joi.string().required().min(8),
   }),
 }), login);
 
-router.post('/signup', celebrate({
+router.post('/api/signup', celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
     password: Joi.string().required().min(8),
@@ -21,8 +21,8 @@ router.post('/signup', celebrate({
   }),
 }), createUser);
 
-router.use('/users', auth, usersRoutes);
-router.use('/articles', auth, articlesRouter);
+router.use('/api/users', auth, usersRoutes);
+router.use('/api/articles', auth, articlesRouter);
 router.use('/*', nonExistentPaths);
 
 module.exports = router;
