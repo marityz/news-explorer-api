@@ -29,7 +29,7 @@
 4. DELETE /articles/articleId - удаляет сохранённую статью  по _id;
 
 IP: 178.154.226.252
-[Ссылка на проект]( https://api.marina.avinkin.ru)
+[Ссылка на проект]( https://api.marina.avinkin.ru/api )
 
 Дипломная работа(v0.0.1)
 

@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const AuthError = require('../errors/401-auth-err');
-const { JWT_SECRET } = require('../clobalconst');
+const { JWT_SECRET } = require('../globalconst');
 
 module.exports.auth = (req, res, next) => {
   if (!req.cookies.jwt) {
