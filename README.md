@@ -31,7 +31,7 @@ http://localhost:3000/api
 3. POST /articles - создаёт статью с переданными в теле (обязательные поля - keyword, title, text, date, source, link и image);
 4. DELETE /articles/articleId - удаляет сохранённую статью  по _id;
 
-IP: 178.154.226.252
+IP: 178.154.224.116
 [Ссылка на проект]( https://api.marina.avinkin.ru/api )
 
 Дипломная работа(v0.0.1)
