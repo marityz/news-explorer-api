@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
@@ -12,9 +13,23 @@ const { ErrorMiddleware } = require('./middlewares/error');
 
 const app = express();
 
+const corsOptions = {
+  origin:["http://localhost:8080", "https://marityz.github.io/news-explorer-frontend", "https://marityz.github.io"],
+  credentials: true,
+};
+
+
+
+
+
+
+
+
+
 app.use(helmet());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
-app.use(requestLimit);
+//app.use(requestLimit);
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
