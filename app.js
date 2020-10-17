@@ -18,7 +18,7 @@ const corsOptions = {
   credentials: true,
 };
 
-
+app.use(cors(corsOptions));
 
 
 
@@ -27,7 +27,7 @@ const corsOptions = {
 
 
 app.use(helmet());
-app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 //app.use(requestLimit);
 app.use(cookieParser());
